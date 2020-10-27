@@ -7,15 +7,12 @@
     <h3>2.上传控件的适配</h3>
     <h3>。。。</h3>
     <h1>制作人发言</h1>
-    <h3>难度不大，有手就行，未来会持续完成</h3>
+    <h3>提升本身技术是第一位</h3>
     <h3>GitHub:lzp666666</h3>
   </div>
 </template>
 <style  lang="scss">
- .about{
-   *{
-       color: #fff;
-   }
-   
- }
+.about{
+  padding: 30px;
+}
 </style>

@@ -1,5 +1,5 @@
 {
-  "name": "vue-cli3",
+  "name": "vue-cli36",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "core-js": "^3.6.5",
     "file-saver": "^2.0.2",
     "js-beautify": "^1.13.0",
+    "sass-loader": "^10.0.4",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuedraggable": "^2.24.2",
