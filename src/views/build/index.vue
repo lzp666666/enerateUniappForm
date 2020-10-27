@@ -33,8 +33,8 @@
     <div class="center-board">
       <div class="action-bar">
         <a-button @click="download">导出VUE文件</a-button>
-        <a-button>复制代码</a-button>
-        <a-button>清空</a-button>
+        <!-- <a-button>复制代码</a-button> -->
+        <!-- <a-button>清空</a-button> -->
       </div>
       <div class="center-scrollbar">
         <a-row class="center-board-row">
@@ -126,8 +126,8 @@ export default {
       formConf,
       componentsData: {
         inputComponents: { title: "输入型组件", data: inputComponents },
-        selectComponents: { title: "输入型组件", data: selectComponents },
-        layoutComponents: { title: "输入型组件", data: layoutComponents },
+        selectComponents: { title: "控制型组件", data: selectComponents },
+        layoutComponents: { title: "布局型组件", data: layoutComponents },
       },
       idGlobal: 100,
       drawingList: JSON.parse(JSON.stringify(drawingDefalut)),
