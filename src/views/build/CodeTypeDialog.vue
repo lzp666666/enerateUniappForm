@@ -2,20 +2,20 @@
   <div class="icon-dialog">
     <a-modal v-model="nowVisible" title="选择生成类型" @ok="handleOk" @cancel="close">
       <a-form :form="form" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }" >
-        <a-form-item label="生成类型">
+        <!-- <a-form-item label="生成类型">
           <a-radio-group default-value="file" button-style="solid" v-model="formData.type">
             <a-radio-button :value="item.value" v-for="(item,index) in typeOptions" :key="index">
               {{ item.label }}
             </a-radio-button>
           </a-radio-group>
-        </a-form-item>
-        <a-form-item label="使用端">
+        </a-form-item> -->
+        <!-- <a-form-item label="使用端">
           <a-radio-group default-value="app" button-style="solid" v-model="formData.typeEnd">
             <a-radio-button :value="item.value" v-for="(item,index) in typeEnd" :key="index">
               {{ item.label }}
             </a-radio-button>
           </a-radio-group>
-        </a-form-item>
+        </a-form-item> -->
         <a-form-item label="文件名">
           <a-input v-model="formData.fileName" placeholder="Basic usage" style="width: 100%" />
         </a-form-item>

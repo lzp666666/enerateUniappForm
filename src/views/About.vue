@@ -11,3 +11,11 @@
     <h3>GitHub:lzp666666</h3>
   </div>
 </template>
+<style  lang="scss">
+ .about{
+   *{
+       color: #fff;
+   }
+   
+ }
+</style>
