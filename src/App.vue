@@ -50,4 +50,25 @@ body {
 /* .component-fade-leave-active for below version 2.1.8 */ {
   opacity: 0;
 }
+/*定义滚动条宽度*/
+@charset "utf-8";
+::-webkit-scrollbar 
+{ 
+  width: 5px; 
+}
+  
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track 
+{ 
+  border-radius: 10px; 
+  background-color: rgba(0,0,0,0.1); 
+} 
+  
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb 
+{ 
+  border-radius: 10px; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+  background-color: rgba(0,0,0,0.1);
+} 
 </style>
