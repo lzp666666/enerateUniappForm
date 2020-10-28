@@ -33,14 +33,13 @@
     <div class="center-board">
       <div class="action-bar">
         <a-button @click="download">导出VUE文件</a-button>
-        <!-- <a-button>复制代码</a-button> -->
+        <a-button @click="copyCode">复制代码</a-button>
 
         <a-popconfirm
           title="是否清空全部?"
           ok-text="Yes"
           cancel-text="No"
           @confirm="delAll"
-          @cancel="cancel"
         >
           <a-button>清空</a-button>
         </a-popconfirm>
@@ -86,10 +85,12 @@
       :show-file-name="codeData.showFileName"
       @confirm="generate"
     />
+    <input id="copyNode" type="hidden">
   </div>
 </template>
 
 <script>
+import ClipboardJS from 'clipboard'
 import draggable from "vuedraggable";
 import {
   inputComponents,
@@ -157,6 +158,19 @@ export default {
   created() {
     console.log("drawingDefalut", drawingDefalut);
   },
+  mounted() {
+    const clipboard = new ClipboardJS("#copyNode", {
+      text: (trigger) => {
+        const codeStr = this.generateCode();
+        console.log('222222222222')
+        this.$message.success("代码已复制到剪切板，可粘贴。");
+        return codeStr;
+      },
+    });
+    clipboard.on("error", (e) => {
+      this.$message.error("代码复制失败");
+    });
+  },
   methods: {
     delAll() {
       this.drawingList = [];
@@ -207,9 +221,16 @@ export default {
       const blob = new Blob([codeStr], { type: "text/plain;charset=utf-8" });
       saveAs(blob, data.fileName);
     },
+    execCopy(data){
+     document.getElementById('copyNode').click()
+    },
     download() {
       this.codeData.dialogVisible = true;
       this.codeData.operationType = "download";
+    },
+    copyCode(){
+      this.codeData.dialogVisible = true;
+      this.codeData.operationType = "copy";
     },
     generateCode() {
       const { type } = this.codeData.generateConf;
