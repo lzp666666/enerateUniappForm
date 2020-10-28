@@ -1083,7 +1083,7 @@ export default {
 </script>
 <style lang="scss">
 .form-y {
-  height: 66%;
+  height: 720px;
   overflow-y: auto;
 }
 .reg-item {
