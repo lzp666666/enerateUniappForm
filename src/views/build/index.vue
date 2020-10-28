@@ -34,7 +34,16 @@
       <div class="action-bar">
         <a-button @click="download">导出VUE文件</a-button>
         <!-- <a-button>复制代码</a-button> -->
-        <!-- <a-button>清空</a-button> -->
+
+        <a-popconfirm
+          title="是否清空全部?"
+          ok-text="Yes"
+          cancel-text="No"
+          @confirm="delAll"
+          @cancel="cancel"
+        >
+          <a-button>清空</a-button>
+        </a-popconfirm>
       </div>
       <div class="center-scrollbar">
         <a-row class="center-board-row">
@@ -149,6 +158,9 @@ export default {
     console.log("drawingDefalut", drawingDefalut);
   },
   methods: {
+    delAll() {
+      this.drawingList = [];
+    },
     activeFormItem(element) {
       console.log("element", element);
       this.activeData = element;
