@@ -10,7 +10,7 @@ ant vue 拖拽表单 生成 uniapp uview 表单
 2.yarn 或者 npm i
 3.启动serve
 
-uniapp引入mixins
+uniapp页面需要mixins引入uniapp/form.js
 ## 图片
 web端操作页面
 ![Image text](src/assets/img/1.png)
